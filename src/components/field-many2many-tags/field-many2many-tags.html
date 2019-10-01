@@ -1,0 +1,31 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<div class="box" [class.edit_mode]="is_edit_mode">
+    <div *ngIf="!nolabel" class="label">{{label}}</div>
+    <ion-spinner *ngIf="loadingState === 'loading'"></ion-spinner>
+    <div class="items" *ngIf="loadingState === 'success'">
+        <ng-container *ngIf="records.length">
+            <div class="item record" *ngFor="let record of records">
+                <ion-badge class="value">
+                    {{record.display_name || record.name}}
+                    <i *ngIf="is_edit_mode"
+                       class="fa fa-fw fa-times" 
+                       aria-hidden="true"
+                       (click)="delete_record($event, record)"
+                       ></i>
+                </ion-badge>
+            </div>
+        </ng-container>
+    </div>
+    <div *ngIf="is_edit_mode" class="placeholder">{{placeholder||label}}</div>
+    <i *ngIf="is_edit_mode&&records.length" class="fa fa-fw fa-times-circle clear" aria-hidden="true" (click)="clear($event)"></i>
+    <i *ngIf="is_edit_mode&&!records.length" class="fa fa-fw fa-angle-right" aria-hidden="true"></i>
+    <div *ngIf="loadingState === 'failed'" class="error">
+        {{'Load failed:' | translate}}{{errorMessage}}
+    </div>
+</div>
+<div class="error" 
+     [style.display]="validate_error_message?'block':'none'">
+  {{validate_error_message}}
+</div>

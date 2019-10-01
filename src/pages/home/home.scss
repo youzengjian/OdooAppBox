@@ -1,0 +1,13 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+page-home {
+    // home页标题部分没有复杂的菜单和文本，将中间title部分放大，以便显示更多内容
+    ion-navbar.toolbar-md div.toolbar-content-md {
+        padding: 0 6.0rem 0.1rem;
+    }
+    ion-content {
+        background-color: map-get(map-get($colors, tertiary), base) !important;
+        color: map-get(map-get($colors, tertiary), contrast) !important;
+    }
+}

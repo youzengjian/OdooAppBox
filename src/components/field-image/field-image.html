@@ -1,0 +1,20 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-item [class.disabled]="!is_edit_mode">
+  <ion-label>
+    <ng-container *ngIf="!nolabel">{{label}}</ng-container>
+  </ion-label>
+  <ion-avatar class="value" item-end *ngIf="image_avatar">
+    <app-img #img [src]="thumbnail_src" 
+        [style.width]="str_rem_img_width" [style.height]="str_rem_img_height"></app-img>
+  </ion-avatar>
+  <div class="value" *ngIf="!image_avatar" item-end>
+      <app-img #img [src]="thumbnail_src" 
+      [style.width]="str_rem_img_width" [style.height]="str_rem_img_height"></app-img>
+  </div>
+</ion-item>
+<div class="error" 
+     [style.display]="validate_error_message?'block':'none'">
+  {{validate_error_message}}
+</div>

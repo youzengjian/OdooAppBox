@@ -1,0 +1,70 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+field-selection {
+    .item-inner {
+        border: none !important;
+    }
+    .item-select .input-wrapper {
+        justify-content: space-between;
+        opacity: 1;
+        font-size: 1.6rem;
+    }
+    .item-select ion-label {
+        flex: 0 0 auto;
+    }
+    .item-select-disabled ion-label, .select-disabled{
+        opacity: 0.7 !important;
+    }
+    ion-item, .item-inner, ion-select, ion-select button {
+        padding: 0 !important;
+    }
+    ion-item {
+        min-height: inherit !important;
+        font-weight: inherit !important;
+        div.select-icon {
+            display: none;
+        }
+        button.clear, button.clear.activated, button.arrow, button.arrow.activated {
+            background-color: transparent;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+
+    div.input-wrapper {
+        display: flex;
+        ion-label.label {
+            flex: 0 0 auto;
+        }
+        ion-select.select {
+            max-width: 100%;
+            flex: 1 1 auto;
+        }
+    }
+
+    &.nolabel ion-label.label {
+        margin: 0;
+    }
+
+    ion-label.label {
+        margin: 0 1.0rem 0 0;
+    }
+
+    &.value-left div.select-text {
+        text-align: left;
+    }
+
+    &.value-center div.select-text {
+        text-align: center;
+    }
+
+    &.value-right div.select-text, div.select-text {
+        text-align: right;
+    }
+
+    // 解决安卓版本 label颜色为#999的问题
+    ion-label.label.label-md {
+        color: #000;
+    }
+}

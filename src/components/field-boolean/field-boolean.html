@@ -1,0 +1,10 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-item *ngIf="widget!='boolean_button'">
+    <ion-label *ngIf="!nolabel">{{label}}</ion-label>
+    <ion-toggle [disabled]="!is_edit_mode" [(ngModel)]="value" (ionChange)="changeListner()"></ion-toggle>
+</ion-item>
+<div class="boolean_button" *ngIf="widget=='boolean_button'">
+    {{text}}
+</div>

@@ -1,0 +1,30 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-header (click)="onHeaderClick($event)">
+    <ion-item class="user_info">
+        <ion-avatar item-start class="user_image">
+            <app-img [src]="user_image"></app-img>
+        </ion-avatar>
+        <h2>{{user_displayname}}</h2>
+        <p>{{username}}</p>
+        <p>{{company_displayname}}</p>
+    </ion-item>
+</ion-header>
+<ion-content>
+    <div class="menu_list">
+        <div *ngFor="let menu_lv1 of get_menus(false)">
+            <ion-item class="menu_lv1" (click)="root_menu_click(menu_lv1)">
+                <i *ngIf="menu_lv1.icon" class="fa fa-fw {{menu_lv1.icon}}" aria-hidden="true"></i>
+                {{menu_lv1.name}}
+            </ion-item>
+            <div class="menu_lv2" *ngFor="let menu_lv2 of get_menus(menu_lv1.id)">
+                <ion-item class="menu_lv2"
+                    [class.active]="active_sub_menu?.id==menu_lv2.id"
+                    (click)="sub_menu_click(menu_lv2)">
+                    {{menu_lv2.name}}
+                </ion-item>
+            </div>
+        </div>
+    </div>
+</ion-content>

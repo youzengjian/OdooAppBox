@@ -1,0 +1,50 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+field-one2many, field-one2many-picking, field-one2many-workorder {
+    font-size: 1.6rem;
+    div.error {
+        color: map-get($colors, danger);
+        white-space: normal;
+    }
+    div.items {
+        min-height: 4rem;
+    }
+    div.no_data {
+        opacity: 0.7;
+        display: flex;
+        min-height: 4.0rem;
+        align-items: center;
+    }
+    div.item {
+        display: flex;
+        align-items: center;
+        min-height: 4rem;
+        padding: 0.3rem 0;
+        border-bottom: 0.1rem solid #eee;
+        &.isSelected {
+            background-color: rgba(35, 209, 139, 0.2);
+            border-color: map-get($colors, default);
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+        > button {
+            flex: 0 0 auto;
+            font-size: 2.0rem;
+            margin: 0 1.0rem 0 0;
+            height: 4rem;
+            background-color: transparent;
+        }
+        i.fa-minus-circle {
+            color: map-get($colors, danger) !important;
+        }
+        i.fa-plus-circle, &.add_record {
+            color: map-get($colors, default) !important;
+        }
+        kanban {
+            flex: 1 1 auto;
+            overflow: hidden;
+        }
+    }
+}

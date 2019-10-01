@@ -1,0 +1,99 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+ion-menu ion-header.header.header-ios:before {
+    content: "";
+    width: 100%;
+    height: 1rem;
+}
+
+.button-md {
+    // 解决安卓版本button存在阴影的问题
+    box-shadow: none !important;
+}
+
+// 统一安卓系统button内字体大小
+button.bar-button-md {
+    font-size: 1.7rem;
+}
+
+// 让安卓系统toolbar布局和ios保持一致---begin
+ion-navbar button.back-button-md {
+    margin: 0;
+}
+
+ion-navbar.toolbar-md div.toolbar-content-md {
+    left: 0;
+    top: 0;
+    padding: 0 9.0rem 0.1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+    pointer-events: none;
+    .title {
+        height: 100%;
+    }
+}
+
+div.toolbar-title-md {
+    // 统一安卓系统标题栏字体大小
+    font-size: 1.7rem;
+    // 安卓系统标题居中
+    text-align: center;
+}
+// 让安卓系统toolbar布局和ios保持一致---end
+
+ion-menu .item-inner {
+    border: 0 !important;
+}
+
+.toast-message {
+    white-space: pre-wrap;
+}
+
+.alert {
+    padding: 1.0rem;
+    margin-bottom: 2.0rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.4rem;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+div.toolbar-background {
+    background-color: map-get(map-get($colors, secondary), base);
+}
+
+div.toolbar-title {
+    color: map-get(map-get($colors, secondary), contrast);
+}
+
+button.show_menu i {
+    font-size: 2.5rem;
+}
+
+button.show_menu, button.back-button {
+    color: map-get(map-get($colors, secondary), contrast);
+}
+
+
+ion-avatar.user_image, ion-avatar.user_image img {
+    width: 6.0rem;
+    height: 6.0rem;
+}
+
+div.invisible {
+    display: none !important;
+}
+
+ion-loading.global-loading {
+    opacity: 0;
+    &.display {
+        opacity: 1;
+    }
+}

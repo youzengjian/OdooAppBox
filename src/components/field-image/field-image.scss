@@ -1,0 +1,63 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+field-image {
+    div.input-wrapper {
+        flex: 0 0 auto;
+    }
+    
+    .value {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &.value-left .value {
+        justify-content: flex-start;
+    }
+
+    &.value-center .value {
+        justify-content: center;
+    }
+
+    &.value-right .value {
+        justify-content: flex-end;
+    }
+
+    ion-label {
+        flex: 0 0 auto;
+        opacity: 1;
+        font-size: 1.6rem;
+    }
+
+    ion-item.disabled ion-label {
+        opacity: 0.7;
+    }
+
+    img {
+        margin: 0 !important;
+    }
+
+    ion-item, .item-inner {
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    ion-item {
+        min-height: inherit !important;
+        font-weight: inherit !important;
+        background: transparent !important;
+    }
+
+    &.nolabel ion-label.label {
+        margin: 0;
+    }
+
+    ion-label.label {
+        margin: 0 1.0rem 0 0;
+    }
+
+    div.value, div.value[item-end], ion-avatar.value, ion-avatar.value[item-end] {
+        margin: 0;
+    }
+}

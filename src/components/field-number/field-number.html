@@ -1,0 +1,19 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<div class="box" [class.edit_mode]="is_edit_mode" [class.active]="active" (click)="input.focus()">
+    <div *ngIf="!nolabel" class="label">{{label}}</div>
+    <input #input type="number" class="value" [style.display]="is_edit_mode?'block':'none'" [value]="value" (change)="changeListner($event)" (focus)="onFocus($event)" (blur)="onBlur($event)">
+    <!-- flex布局内过长的文本显示省略号存在bug，需要增加一个中间层，并设置该中间层min-width属性 -->
+    <div class="value" [style.display]="is_edit_mode?'none':'block'">
+      <ng-container *ngIf="currency_position=='before'">{{currency_symbol}}</ng-container>
+        <ng-container *ngIf="name==='id'">
+          {{value}}
+        </ng-container>
+        <ng-container *ngIf="name!=='id'">
+          {{value | number:digitsInfo}}
+        </ng-container>
+      <ng-container *ngIf="currency_position=='after'">{{currency_symbol}}</ng-container>
+    </div>
+    <i *ngIf="is_edit_mode&&value" class="fa fa-fw fa-times-circle clear" aria-hidden="true" (click)="clear($event)"></i>
+  </div>

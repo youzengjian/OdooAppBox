@@ -1,0 +1,41 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+page-login {
+    
+    .item-inner {
+        border-bottom: none !important;
+    }
+
+    ion-content {
+        background-color: map-get(map-get($colors, primary), base) !important;
+        color:  map-get(map-get($colors, primary), contrast) !important;
+
+        ion-item {
+            min-height: 2.8em !important;
+            border-radius: 0.4rem !important;
+            margin-bottom: 1.0rem !important;
+            input {
+                width: 100%;
+                border: none;
+            }
+        }
+        
+        h1 {
+            margin: 2.0rem !important;
+        }
+
+
+        button {
+            border-radius: 0.4rem !important;
+        }
+
+        .button-inner {
+            font-size: 1.7rem;
+        }
+
+        div.alert {
+            margin: -0.5rem 0 0.5rem 0;
+        }
+    }
+}

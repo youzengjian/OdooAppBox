@@ -1,0 +1,165 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+page-form {
+    div.separator {
+        font-size: 1.8rem;
+        padding: 2.0rem 1.6rem 0.5rem 1.6rem;
+        background-color: #eee;
+        margin: 0;
+    }
+
+    div.separator-text {
+        font-size: 1.8rem;
+        padding: 2.0rem 0rem 0.5rem 0rem;
+        margin: 0;
+    }
+
+    div.field-text {
+        opacity: 0.7;
+    }
+
+    &.editmode div.field-text {
+        opacity: 1.0;
+    }
+
+    div.section, div.tab {
+        border-top: 0.1rem solid #eee;
+        border-bottom: 0.1rem solid #eee;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        min-height: 4.0rem;
+    }
+
+    &.editmode div.section {
+        padding-left: 1.0rem;
+    }
+
+    &.editmode div.tab {
+        padding-left: 1.0rem;
+    }
+
+    &.editmode .field-item {
+        margin-left: 0;
+        border-left: 0.3rem solid #ccc;
+        padding-left: 0.3rem;
+        &.editmode {
+            border-left: 0.3rem solid map-get($colors, default);
+        }
+        &.editmode.required {
+            border-left: 0.3rem solid #d9534f;
+        }
+    }
+
+    &.editmode page-button > .field-item {
+        padding-left: 0 !important;
+        border-left: 0 !important;
+    }
+
+    div.section > .field-item:nth-last-child(1) {
+        border-bottom: none;
+    }
+
+    div.tab > .field-item:nth-last-child(1) {
+        border-bottom: none;
+    }
+
+    div.tabs {
+        margin-top: 2rem;
+    }
+
+    div.tab_btns {
+        display: flex;
+        align-items: baseline;
+        font-size: 1.6rem;
+        margin-left: 0.9rem;
+        margin-right: 1.6rem;
+        overflow-x: scroll;
+        div.tab_btn {
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            opacity: 0.7;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            min-width: 40px;
+            &.active {
+                border: 0.1rem solid #ccc;
+                border-radius: 0.5rem 0.5rem 0 0;
+                margin-bottom: -0.1rem;
+                border-bottom: 0.1rem solid #fff;
+                opacity: 1.0;
+                font-weight: bold;
+                flex: 0 0 auto;
+            }
+        }
+    }
+
+    div.tab {
+        display: none;
+    }
+
+    div.tab.active {
+        display: block;
+    }
+
+    .field-item {
+        border-bottom: 0.1rem solid #eee;
+        display: block;
+        overflow: hidden;
+        min-height: 4rem;
+        .field-item {
+            min-height: auto;
+            border-left: none;
+            border-bottom: none;
+            margin: 0;
+        }
+        &.invisible {
+            display: none !important;
+        }
+        .error {
+            color: #d9534f;
+            padding: 0.5rem;
+            background-color: #f2dede;
+        }
+
+        i.fa-times-circle.clear, i.fa-angle-right {
+            color: #ccc;
+            font-size: 2.4rem;
+            width: 2.8rem;
+            flex: 0 0 auto;
+        }
+    }
+
+    button.cancel, button.to_edit_mode, button.save_record {
+        color: map-get(map-get($colors, secondary), contrast);
+    }
+
+    div.no_more_data {
+        height: 5.0rem;
+        text-align: center;
+        padding-top: 1.5rem;
+        color: #ccc;
+    }
+
+    div.powered_by {
+        height: 5.0rem;
+        text-align: center;
+        padding-top: 1.5rem;
+        color: #ddd;
+    }
+
+    ion-footer ng-component {
+        display: flex;
+        justify-content: space-between;
+        page-button {
+            flex: 1 1 auto;
+            width: 1%;
+            border-right: 0.1rem solid white;
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-item>
+  <ion-label>
+    <ng-container *ngIf="!nolabel">{{label}}</ng-container>
+  </ion-label>
+  <ion-datetime [disabled]="!is_edit_mode" 
+                displayFormat="{{displayFormat}}" 
+                pickerFormat="{{pickerFormat}}" 
+                [(ngModel)]="value" 
+                (click)="onClick($event)"
+                (ionChange)="changeListner()">
+              </ion-datetime>
+  <button *ngIf="is_edit_mode&&value" class="clear" ion-button item-end (click)="clear($event)">
+    <i class="clear fa fa-fw fa-times-circle" aria-hidden="true"></i>
+  </button>
+</ion-item>
+<div class="error" 
+     [style.display]="validate_error_message?'block':'none'">
+  {{validate_error_message}}
+</div>

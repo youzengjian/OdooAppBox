@@ -1,0 +1,66 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+field-datetime {
+    .item-inner {
+        border: none !important;
+    }
+    .item-datetime .input-wrapper {
+        justify-content: space-between;
+        opacity: 1;
+        font-size: 1.6rem;
+    }
+    .item-datetime ion-label {
+        flex: 0 0 auto;
+    }
+    .item-datetime-disabled ion-label, .datetime-disabled{
+        opacity: 0.7 !important;
+    }
+    ion-item, .item-inner, ion-datetime, ion-datetime button {
+        padding: 0 !important;
+    }
+    ion-item {
+        min-height: inherit !important;
+        font-weight: inherit !important;
+        button.clear, button.clear.activated {
+            background-color: transparent;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+
+    div.input-wrapper {
+        display: flex;
+        ion-label.label {
+            flex: 0 0 auto;
+        }
+        ion-datetime.datetime {
+            flex: 1 1 auto;
+        }
+    }
+
+    &.nolabel ion-label.label {
+        margin: 0;
+    }
+
+    ion-label.label {
+        margin: 0 1.0rem 0 0;
+    }
+
+    &.value-left div.datetime-text {
+        text-align: left;
+    }
+
+    &.value-center div.datetime-text {
+        text-align: center;
+    }
+
+    &.value-right div.datetime-text, div.datetime-text{
+        text-align: right;
+    }
+
+    // 解决安卓版本 label颜色为#999的问题
+    ion-label.label.label-md {
+        color: #000;
+    }
+}

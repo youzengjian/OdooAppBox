@@ -1,0 +1,69 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+app-menu-type-one {
+    ion-header, ion-item.user_info {
+        color: map-get(map-get($colors, primary), contrast);
+        background-color: map-get(map-get($colors, primary), base);
+        min-height: 9.0rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        ion-label.label p {
+            color: #fff;
+            opacity: 0.7;
+        }
+    }
+    
+    div.scroll-content {
+        background-color: map-get(map-get($colors, tertiary), base);
+        margin-top: 9.0rem;
+    }
+    
+    div.root_menu_list {
+        float: left;
+        width: 6.0rem;
+        height: 100%;
+        background-color: map-get(map-get($colors, secondary), base);
+        button {
+            width: 6.0rem;
+            height: 7.0rem;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            font-size: 3.2rem;
+            background: transparent;
+            &.active {
+                background-color: map-get(map-get($colors, tertiary), base);
+            }
+        }
+    }
+    
+    div.sub_menu_list {
+        margin-left: 6.0rem;
+        height: 100%;
+        div.menu_lv3:first-of-type {
+            margin-top: -1.0rem;
+        }
+        ion-item {
+            width: 100%;
+            font-size: 2.0rem;
+            color: map-get(map-get($colors, tertiary), contrast);
+            background-color: transparent;
+            &.menu_lv2 {
+                min-height: 2.5em !important;
+                max-height: 2.5em !important;
+            }
+            &.menu_lv3 {
+                padding-left: 4.0rem;
+                min-height: 2em !important;
+                max-height: 2em !important;
+            }
+            &.active {
+                background-color: map-get(map-get($colors, tertiary), contrast);
+                color: map-get(map-get($colors, tertiary), base);
+            }
+        }
+    }    
+}

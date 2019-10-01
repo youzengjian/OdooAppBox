@@ -1,0 +1,13 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-menu [content]="mycontent">
+    <ng-container *ngIf="show_menu">
+        <ng-container [ngSwitch]="menu_type">
+            <app-menu-type-one *ngSwitchCase="1"></app-menu-type-one>
+            <app-menu-type-two *ngSwitchCase="2"></app-menu-type-two>
+        </ng-container>
+    </ng-container>
+</ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+

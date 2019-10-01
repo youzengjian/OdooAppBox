@@ -1,0 +1,40 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle icon-only class="show_menu">  
+      <i class="fa fa-fw fa-bars" aria-hidden="true"></i>
+    </button>
+    <ion-buttons start [style.display]="display_btn_discard?'inherit':'none'">
+      <button ion-button (click)="cancel()" class="cancel">
+        {{"Discard" | translate}}
+      </button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end [style.display]="enable_edit_mode&&target!=='new'?'inherit':'none'">
+      <button ion-button [style.display]="display_btn_edit?'inherit':'none'" (click)="toEditMode()" class="to_edit_mode">
+          {{"Edit" | translate}}
+      </button>
+      <button ion-button [style.display]="display_btn_save?'inherit':'none'" (click)="confirm(null, null, null)" class="save_record">
+        <ng-container *ngIf="has_one2many_parent">
+            {{"Confrim" | translate}}
+        </ng-container>
+        <ng-container *ngIf="!has_one2many_parent">
+            {{"Save" | translate}}
+        </ng-container>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ng-template #container_content></ng-template>
+</ion-content>
+
+<ion-footer>
+  <ng-template #container_footer></ng-template>
+</ion-footer>

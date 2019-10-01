@@ -1,0 +1,187 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+page-kanban {    
+    .item-inner {
+        border: none !important;
+        padding: 0 !important;
+        ion-label {
+            margin: 0 !important;
+        }
+    }
+
+    ion-item-sliding.item-wrapper {
+        border-bottom: 0.1rem solid #ddd;
+        ion-item-options button.copy {
+            background-color: #23d18b !important;
+            &.disabled {
+                background-color: #ccc !important;
+            }
+        }
+        ion-item-options button.unlink {
+            background-color: #ff3b2f !important;
+            &.disabled {
+                background-color: #ccc !important;
+            }
+        }
+    }
+
+    field-one2many div.item {
+        border-bottom: none;
+    }
+
+    ion-item.record {
+        padding: 0.5rem 0;
+        margin: 0 1.6rem;
+        width: auto;
+    }
+
+    ion-header {
+        .action-bar {
+            align-items: center;
+            padding: 0.5rem 1.0rem;
+            background-color: map-get(map-get($colors, tertiary), base);
+            ion-input {
+                flex: 1 0 auto;
+                width: 5.0rem;
+            }
+        }
+
+        i.fa-plus {
+            color: map-get(map-get($colors, secondary), contrast);
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            flex-flow: row wrap;
+            background-color: map-get(map-get($colors, tertiary), contrast);
+            padding: 0 0.5rem 0.5rem 0.5rem;
+            border-radius: 0.5rem;
+        }
+
+        div.active-domain-group-list {
+            flex-grow: 0;
+            padding: 0.5rem 0.5rem 0 0;
+        }
+
+        ion-item.active-domain-group-item {
+            font-size: 1.6rem;
+            min-height: 2.2rem;
+            padding-left: 0;
+            background-color: map-get(map-get($colors, secondary), base);
+            color: map-get(map-get($colors, secondary), contrast);
+            border-radius: 0.5rem;
+
+            .active-domain-group-item-string {
+                margin: 0 0.3rem;
+            }
+
+            div.active-domain-group-item-domain-string {
+                white-space: normal;
+                word-break: break-word;
+                padding: 0 0.5rem;
+            }
+
+            .item-inner {
+                background-color: map-get(map-get($colors, tertiary), base);
+                color: map-get(map-get($colors, tertiary), contrast);
+                margin: 0.1rem;
+                padding: 0 !important;
+                border: 0 !important;
+                border-radius: 0 0.5rem 0.5rem 0;
+            }
+
+            ion-label.label {
+                margin: 0 0 0 0.3rem;
+            }
+        }
+
+        ion-input {
+            flex-grow: 1;
+            padding: 0.5rem 0.5rem 0 0;
+            display: inline-block;
+            input {
+                margin: 0 !important;
+                min-height: 2.0rem;
+            }
+        }
+    }
+
+    div.scroll-content {
+        border: none !important;
+    }
+
+    .filter-group-list, .active-search-list {
+        border-top: 1px solid #eee;
+        .header {
+            color: #ccc;
+            padding: 1.0rem 1.0rem 0.5rem 1.0rem;
+            font-size: 1.6rem;
+        }
+
+        div.filter-list, div.value-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .filter-list ion-badge.filter-item, .value-list ion-badge.active-search-item {
+            display: flex;
+            margin: 1.0rem;
+            padding: 0;
+            font-size: 1.8rem;
+            white-space: normal;
+            word-break: break-word;
+            color: map-get(map-get($colors, tertiary), base);
+            background-color: map-get(map-get($colors, tertiary), contrast);
+            .value {
+                padding: 0.3rem 0.3rem 0.3rem 0.8rem;
+            }
+            .clear-item {
+                display: flex;
+                align-items: center;
+                padding-right: 0.3rem;
+            }
+            &.active {
+                color: map-get(map-get($colors, tertiary), contrast);
+                background-color: map-get(map-get($colors, tertiary), base);
+            }
+        }
+    }
+
+    ion-content ion-item.search-list-item{
+        min-height: 4rem;
+        padding-left: 0;
+        &, & i.fa {
+            font-size: 1.8rem;
+            background-color: map-get(map-get($colors, secondary), contrast);
+            color: map-get(map-get($colors, secondary), base);
+        }
+
+        &:first-of-type, &:first-of-type i.fa {
+            background-color: map-get(map-get($colors, secondary), base);
+            color: map-get(map-get($colors, secondary), contrast);
+        }
+        & [item-start] {
+            margin: 0 0 0 1.5rem;
+        }
+
+
+    }
+
+    button.search.discard, button.search.confirm {
+        color: map-get(map-get($colors, secondary), contrast);
+    }
+
+    .field-item {
+        min-height: 3rem;
+    }
+
+    field-image.field-item {
+        padding: 0;
+    }
+
+    .field-item.invisible {
+        display: none !important;
+    }
+}

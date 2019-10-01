@@ -1,0 +1,14 @@
+{
+	"locale": {
+		"ios": ["zh-Hans"],
+		"android": ["zh-rCN"]
+	},
+	"config_ios": {
+		"NSCameraUsageDescription": "需要您相机的访问权限，才能拍摄照片",
+		"NSPhotoLibraryUsageDescription": "需要您相册的访问权限，才能选择照片",
+		"NSLocationWhenInUseUsageDescription": "需要您位置的访问权限，才能显示您的位置",
+		"NSPhotoLibraryAddUsageDescription": "需要您相册的写入权限，才能保存照片",
+		"CFBundleDisplayName": "Odoo手机客户端",
+		"CFBundleName": "Odoo手机客户端"
+	}
+}

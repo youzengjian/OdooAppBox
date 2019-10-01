@@ -1,0 +1,19 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<div class="box" 
+     [class.edit_mode]="is_edit_mode">
+  <div *ngIf="!nolabel" class="label">{{label}}</div>
+  <input #input placeholder="{{placeholder}}" class="value" 
+         [style.display]="is_edit_mode?'block':'none'" 
+         [value]="value||''" 
+         (change)="changeListner($event)">
+  <div class="value" [style.display]="is_edit_mode?'none':'block'">
+    {{value||""}}
+  </div>
+  <i *ngIf="is_edit_mode&&value" class="fa fa-fw fa-times-circle clear" aria-hidden="true" (click)="clear($event)"></i>
+</div>
+<div class="error" 
+     [style.display]="validate_error_message?'block':'none'">
+  {{validate_error_message}}
+</div>

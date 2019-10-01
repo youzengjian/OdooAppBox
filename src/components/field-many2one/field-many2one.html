@@ -1,0 +1,18 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<div class="box" [class.edit_mode]="is_edit_mode">
+  <div *ngIf="!nolabel" class="label">{{label}}</div>
+  <div class="value">
+    {{relation_res_name}}
+  </div>
+  <!-- <button class="edit" ion-button icon-only (click)="onEditClick($event)" [style.display]="enable_edit_button?'inherit':'none'">
+    <i class="fa fa-fw fa-external-link" aria-hidden="true"></i>
+  </button> -->
+  <i *ngIf="is_edit_mode&&relation_res_id" class="fa fa-fw fa-times-circle clear" aria-hidden="true" (click)="clear($event)"></i>
+  <i *ngIf="display_angle_right" class="fa fa-fw fa-angle-right" aria-hidden="true"></i>
+</div>
+<div class="error" 
+     [style.display]="validate_error_message?'block':'none'">
+  {{validate_error_message}}
+</div>

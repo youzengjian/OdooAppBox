@@ -1,0 +1,13 @@
+{
+	"locale": {
+		"ios": ["en"]
+	},
+	"config_ios": {
+		"NSCameraUsageDescription": "need camera access to take pictures",
+		"NSPhotoLibraryUsageDescription": "need photo library access to get pictures from there",
+		"NSLocationWhenInUseUsageDescription": "need location access to find things nearby",
+		"NSPhotoLibraryAddUsageDescription": "need photo library access to save pictures there",
+		"CFBundleDisplayName": "Odoo Mobile Application",
+		"CFBundleName": "Odoo Mobile Application"
+	}
+}

@@ -1,0 +1,10 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<div class="box"
+    [class.edit_mode]="is_edit_mode">
+  <div *ngIf="!nolabel" class="label">{{label}}</div>
+  <div class="value">
+    {{file_size}}
+  </div>
+</div>

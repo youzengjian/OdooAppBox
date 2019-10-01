@@ -1,0 +1,55 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+field-boolean {
+    opacity: 1;
+    font-size: 1.6rem;
+    .item-toggle-disabled ion-label, .toggle-disabled{
+        opacity: 0.7 !important;
+    }
+    ion-item, .item-inner, ion-toggle, ion-toggle button {
+        padding: 0 !important;
+    }
+    ion-item {
+        min-height: inherit !important;
+    }
+    .item-inner {
+        border: none !important;
+    }
+    &.nolabel ion-label.label {
+        margin: 0;
+    }
+    ion-label.label {
+        margin: 0 1.0rem 0 0;
+    }
+    div.input-wrapper {
+        flex: 0 0 auto;
+    }
+    ion-toggle.toggle {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: flex-end;
+        &.toggle-ios div.toggle-icon, &.toggle-ios button.item-cover {
+            width: 5.1rem;
+        }
+        &.toggle-md div.toggle-icon, &.toggle-md button.item-cover {
+            width: 3.6rem;
+        }
+    }
+
+    &.value-left ion-toggle.toggle, &.value-left.field-item[widget='boolean_button'] {
+        justify-content: flex-start;
+    }
+    &.value-center ion-toggle.toggle, &.value-center.field-item[widget='boolean_button'] {
+        justify-content: center;
+    }
+    &.value-right ion-toggle.toggle, &.value-right.field-item[widget='boolean_button'] {
+        justify-content: flex-end;
+    }
+
+    &.field-item[widget='boolean_button'] {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}

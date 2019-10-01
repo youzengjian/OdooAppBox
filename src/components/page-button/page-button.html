@@ -1,0 +1,12 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<i *ngIf="icon" class="fa fa-fw {{icon}}" aria-hidden="true"
+    [style.font-size]="icon_size"
+    [style.width]="icon_pos=='top'?'100%':'auto'"
+    [style.color]='icon_color'
+    ></i>
+<div [style.font-size]="font_size"
+     [style.width]="icon_pos=='top'?'100%':'auto'"
+     [style.display]="label?'block':'none'">{{label}}</div>
+<ng-content select=".field-item"></ng-content>

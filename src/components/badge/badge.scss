@@ -1,0 +1,18 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+badge {
+    margin: 0.2rem;
+    ion-badge {
+        display: flex;
+        align-items: center;
+        background-color: #c392b6 !important;
+        .field-item {
+            padding: 0;
+            min-height: auto;
+        }
+    }
+    &.invisible {
+        display: none;
+    }
+}

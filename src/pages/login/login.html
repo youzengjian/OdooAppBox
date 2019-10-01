@@ -1,0 +1,60 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-content padding>
+<h1 text-center>Odoo</h1>
+<form *ngIf="type=='login'">
+  <div>
+    <ion-item>
+      <i class="fa fa-fw fa-user" aria-hidden="true" item-start></i>
+      <input [(ngModel)]="username" name="username" type="text" placeholder="{{'Username' | translate}}" (click)="usernameErrorMessage=''"/>
+    </ion-item>
+    <div class="alert alert-danger" *ngIf="usernameErrorMessage">{{usernameErrorMessage}}</div>
+    <ion-item>
+      <i class="fa fa-fw fa-key" aria-hidden="true" item-start></i>
+      <input [(ngModel)]="password" name="password" type="password" placeholder="{{'Password' | translate}}" (click)="passwordErrorMessage=''"/>
+    </ion-item>
+    <div class="alert alert-danger" *ngIf="passwordErrorMessage">{{passwordErrorMessage}}</div>
+    <div class="alert alert-danger" *ngIf="loginErrorMessage">{{loginErrorMessage}}</div>
+    <button type="button" ion-button full color="default" (click)="login()">{{'Login' | translate}}</button>
+    <!-- <button type="button" ion-button full clear color="default" (click)="switch_to_signup()"><u style="color: #eee;">{{'Sign Up' | translate}}</u></button> -->
+  </div>
+</form>
+<form *ngIf="type=='signup'">
+  <ion-item>
+    <i class="fa fa-fw fa-mobile" aria-hidden="true" item-start></i>
+    <input [(ngModel)]="username" name="username" type="number" placeholder="{{'Mobile' | translate}}" (click)="mobileErrorMessage=''"/>
+  </ion-item>
+  <div class="alert alert-danger" *ngIf="mobileErrorMessage">{{mobileErrorMessage}}</div>
+  <ion-item>
+    <i class="fa fa-fw fa-user" aria-hidden="true" item-start></i>
+    <input [(ngModel)]="name" name="name" type="text" placeholder="{{'Your Name' | translate}}" (click)="nameErrorMessage=''"/>
+  </ion-item>
+  <div class="alert alert-danger" *ngIf="nameErrorMessage">{{nameErrorMessage}}</div>
+  <ion-item>
+    <i class="fa fa-fw fa-check-square-o" aria-hidden="true" item-start></i>
+    <input [(ngModel)]="token" name="token" type="text" placeholder="{{'SMS Code' | translate}}" (click)="tokenErrorMessage=''"/>
+    <button ion-button clear item-end color="default" (click)="get_token()">
+      {{'Send Code' | translate}}
+    </button>
+  </ion-item>
+  <div class="alert alert-danger" *ngIf="tokenErrorMessage">{{tokenErrorMessage}}</div>
+  <ion-item>
+    <i class="fa fa-fw fa-key" aria-hidden="true" item-start></i>
+    <input [(ngModel)]="password" name="password" type="password" placeholder="{{'Password' | translate}}" (click)="passwordErrorMessage=''"/>
+  </ion-item>
+  <div class="alert alert-danger" *ngIf="passwordErrorMessage">{{passwordErrorMessage}}</div>
+  <ion-item>
+    <i class="fa fa-fw fa-key" aria-hidden="true" item-start></i>
+    <input [(ngModel)]="password2" name="password2" type="password" placeholder="{{'Confirm Password' | translate}}" (click)="password2ErrorMessage=''"/>
+  </ion-item>
+  <div class="alert alert-danger" *ngIf="password2ErrorMessage">{{password2ErrorMessage}}</div>
+  <div class="alert alert-danger" *ngIf="signupErrorMessage">{{signupErrorMessage}}</div>
+  <button type="button" ion-button full color="default" (click)="signup()">{{'Submit' | translate}}</button>
+  <button type="button" ion-button full clear color="default" (click)="switch_to_login()"><u style="color: #eee;">{{'Back to Login' | translate}}</u></button>
+</form>
+<div style="display: flex; justify-content: center; color: rgba(255, 255, 255, 0.5); padding: 1.5rem;">
+  <!-- You must keep this information. -->
+  Powered by OdooAppBox
+</div>
+</ion-content>

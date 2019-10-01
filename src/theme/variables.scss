@@ -1,0 +1,45 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+$font-path: "../assets/fonts";
+
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+$colors: (
+  // 主要用于页面最深的背景颜色
+  primary:  (
+    base: #581d48,
+    contrast: #FFFFFF
+  ),
+  // 主要用于页面第二深的背景颜色
+  secondary:  (
+    base: #875a7b,
+    contrast: #FFFFFF
+  ),
+  // 主要用于页面第三深的背景颜色
+  tertiary: (
+    base: #c392b6,
+    contrast: #FFFFFF
+  ),
+  // 主要用于页面第四深的背景颜色
+  quaternary: (
+    base: #e1b7d5,
+    contrast: #FFFFFF
+  ),
+  // default: #007aff,
+  default: #23d18b,
+  danger: #ff3b2f,
+);
+
+@import "ionic.theme.default";
+
+@import "ionic.ionicons";
+
+@import "roboto";
+@import "noto-sans";
+
+$fa-font-path: $font-path;
+@import "font-awesome";

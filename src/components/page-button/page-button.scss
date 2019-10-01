@@ -1,0 +1,45 @@
+// Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+// See README.md and LICENSE files for full copyright and licensing details.
+
+page-button {
+    width: 100%;
+    min-height: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        flex: 0 0 auto;
+        padding: 0.5rem;
+    }
+
+    > div {
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &.invisible {
+        display: none;
+    }
+
+    .field-item {
+        border-bottom: none !important;
+        flex: 1 1 auto;
+        width: 1%;
+        div.box {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            padding: 0.2rem 0;
+        }
+    }
+
+    &[widget='statinfo'] {
+        margin: 0 -0.1rem -0.1rem 0;
+        width: 10rem;
+        border: 0.1rem solid;
+    }
+}

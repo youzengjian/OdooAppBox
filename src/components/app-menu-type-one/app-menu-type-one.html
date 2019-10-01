@@ -1,0 +1,42 @@
+<!-- Part of OdooAppBox(https://github.com/youzengjian/OdooAppBox). 
+See README.md and LICENSE files for full copyright and licensing details. -->
+
+<ion-header (click)="onHeaderClick($event)">
+    <ion-item class="user_info">
+        <ion-avatar item-start class="user_image">
+            <app-img [src]="user_image"></app-img>
+        </ion-avatar>
+        <h2>{{user_displayname}}</h2>
+        <p>{{username}}</p>
+        <p>{{company_displayname}}</p>
+    </ion-item>
+</ion-header>
+<ion-content>
+    <div class="root_menu_list">
+        <button *ngFor="let root_menu of get_menus(false)"
+            [class.active]="active_root_menu?.id==root_menu.id" ion-button icon-only
+            (click)="root_menu_click(root_menu)">
+            <i class="fa fa-fw {{root_menu.icon}} || fa-exclamation-circle" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="sub_menu_list" *ngIf="active_root_menu">
+        <div *ngFor="let menu_lv2 of get_menus(active_root_menu.id)">
+            <ion-item class="menu_lv2"
+                [class.active]="active_sub_menu?.id==menu_lv2.id"
+                (click)="sub_menu_click(menu_lv2)">
+                {{menu_lv2.name}}
+                <i *ngIf="menu_has_action(menu_lv2)" class="fa fa-fw fa-angle-right" aria-hidden="true"></i>
+            </ion-item>
+            <div class="menu_lv3" *ngFor="let menu_lv3 of get_menus(menu_lv2.id)">
+                <ion-item class="menu_lv3"
+                    [class.active]="active_sub_menu?.id==menu_lv3.id"
+                    (click)="sub_menu_click(menu_lv3)">
+                    {{menu_lv3.name}}
+                    <i *ngIf="menu_has_action(menu_lv3)" class="fa fa-fw fa-angle-right" aria-hidden="true"></i>
+                </ion-item>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
