@@ -4,9 +4,31 @@
 OdooAppBox是一款基于ionic 3框架的[Odoo](https://www.odoo.com/)专用手机APP，支持安卓和iPhone。
 
 ## 开始使用
-[安卓APP打包说明](https://github.com/youzengjian/OdooAppBox/blob/master/BUILD-ANDROID.md)
+1. APP打包或下载
+    * 使用代码编译
+        [安卓APP打包](https://github.com/youzengjian/OdooAppBox/blob/master/BUILD-ANDROID.md)
+        [iPhone APP打包](https://github.com/youzengjian/OdooAppBox/blob/master/BUILD-IPHONE.md)
+    * 直接下载安装
+        <table>
+            <tr>
+                <th>手机类型</th>
+                <th>下载地址</th>
+            </tr>
+            <tr>
+                <td rowspan="2">安卓</td>
+                <td>谷歌应用商店: https://play.google.com/store/apps/details?id=com.odooappbox</td>
+            </tr>
+            <tr>
+                <td>直接下载: https://d.atknit.com/odooappbox.apk</td>
+            </tr>
+            <tr>
+                <td rowspan="2">iPhone</td>
+                <td>App Store: https://apps.apple.com/us/app/odooappbox/id1465496744</td>
+            </tr>
+        </table>
 
-[iPhone APP打包说明](https://github.com/youzengjian/OdooAppBox/blob/master/BUILD-IPHONE.md)
+2. Odoo后台插件安装
+    详见[OdooAppBox_addons](https://github.com/youzengjian/OdooAppBox_addons)
 
 ## 特色功能
 参照Odoo的视图菜单、动作、视图的配置方式，在手机APP上实现类似的功能。您无需重新打包手机APP，只需通过修改后台配置即可快速完成手机APP功能更新，从而以更低的开发成本，更快的响应速度应对客户频繁变更的需求。
@@ -27,3 +49,4 @@ OdooAppBox是一款基于ionic 3框架的[Odoo](https://www.odoo.com/)专用手�
 * 邮箱: youzengjian@gmail.com
 
 * QQ: 1294739135
+..
