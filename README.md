@@ -3,10 +3,22 @@
 ## 介绍
 OdooAppBox是一款基于ionic 3框架的[Odoo](https://www.odoo.com/)专用手机APP，支持安卓和iPhone。
 
+## 必读
+本项目为开源免费的项目，但时常有人加QQ问问题，为此也投入了不少时间，但始终没有产出（FAQ、Issue、教程等）
+
+为了避免重复投入，后续使用该项目的人员，请注意以下几点要求：
+
+* 打包问题，按打包环境要求（版本完全一致）已经过验证，如有问题，可以找作者交流，唯一要求是需要在交流以后发布相关教程
+
+* 程序BUG可以直接提issue，如何提问请参考“提问的智慧”
+
+
 ## 开始使用
 1. APP打包或下载
     * 使用代码编译
+        
         [安卓APP打包](https://github.com/youzengjian/OdooAppBox/blob/master/BUILD-ANDROID.md)
+
         [iPhone APP打包](https://github.com/youzengjian/OdooAppBox/blob/master/BUILD-IPHONE.md)
     * 直接下载安装
         <table>
@@ -23,7 +35,7 @@ OdooAppBox是一款基于ionic 3框架的[Odoo](https://www.odoo.com/)专用手�
             </tr>
             <tr>
                 <td rowspan="2">iPhone</td>
-                <td>App Store: https://apps.apple.com/us/app/odooappbox/id1465496744</td>
+                <td>暂不提供，如有需求可自行打包</td>
             </tr>
         </table>
 
